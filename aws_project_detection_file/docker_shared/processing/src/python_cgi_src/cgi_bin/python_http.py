@@ -1,9 +1,10 @@
 # coding: utf-8
 from http.server import BaseHTTPRequestHandler, HTTPServer,\
 SimpleHTTPRequestHandler
-from urllib.parse import parse_qs, urlparse
+#from urllib.parse import parse_qs, urlparse
+import urllib.parse as urlparse
 
-import run_detection
+#import run_detection
 #/Users/ruimac/python_http_server/python_http_server_file/docker_shared/processing/src/run_detection.py
 
 def start(port, callback):

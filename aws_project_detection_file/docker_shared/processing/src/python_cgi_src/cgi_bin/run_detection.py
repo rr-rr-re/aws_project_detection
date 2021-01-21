@@ -11,7 +11,7 @@ import Cython
 import face_detection
 # httpserver
 import sys
-import MyHTTPRequestHandler
+import python_http
 
 input_path = '/media/docker_shared/mono_develop/img/getImg.jpg'
 output_path = '/media/docker_shared/mono_develop/img/kansei.jpg'
@@ -30,4 +30,4 @@ def call_processing():
 
 if __name__ == '__main__':
     port = sys.argv[1]
-    MyHTTPRequestHandler.start(port, call_processing)
+    python_http.start(port, call_processing)
