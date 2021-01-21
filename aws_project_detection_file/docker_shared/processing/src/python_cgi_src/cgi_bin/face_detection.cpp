@@ -7,7 +7,7 @@
 
 void face_detect() {
 
-  std::string input_image_path  = "/media/docker_shared/mono_develop/img/lena.jpeg";
+  std::string input_image_path  = "/media/docker_shared/mono_develop/img/getImg.jpeg";
   std::string output_image_path = "/media/docker_shared/mono_develop/img/kansei.jpg";
 
   // 画像を読み込む

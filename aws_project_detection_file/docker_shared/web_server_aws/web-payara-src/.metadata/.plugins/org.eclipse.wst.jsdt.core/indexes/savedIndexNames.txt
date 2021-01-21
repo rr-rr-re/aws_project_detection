@@ -1,6 +1,5 @@
-INDEX VERSION 1.4+/Users/ruimac/AWS_files/eclipse-workspace-mainAWS/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-551619145.index
-3339719879.index
-1911837027.index
-544099838.index
-3264587112.index
+INDEX VERSION 1.4+/Users/ruimac/aws_project_detection/aws_project_detection_file/docker_shared/web_server_aws/web-payara-src/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1306607146.index
+1712329758.index
+1920349532.index
+4006471802.index

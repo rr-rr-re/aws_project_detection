@@ -30,6 +30,7 @@ import practice1.rest.UserDto.UserDto;
 import practice1.rest.UserDto.UserLogDto;
 import process.ProcessService;
 import process.PythonCall;
+import python.http.PythonHttpConnection;
 
 @Path("sample2")
 public class Demo1ServiceResource {
@@ -86,7 +87,8 @@ public class Demo1ServiceResource {
  
 		ProcessService.ProcessImage(decoded); //送られてきた画像をファイルに保存　OK
 		
-		PythonCall.do_python();
+		PythonHttpConnection.sendGet();
+		//PythonCall.do_python();
 	
 	}
 	

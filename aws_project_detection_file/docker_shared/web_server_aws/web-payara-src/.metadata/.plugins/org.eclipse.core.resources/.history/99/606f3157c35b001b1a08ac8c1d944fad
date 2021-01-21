@@ -1,0 +1,38 @@
+package python.http;
+
+import java.net.URI;
+import java.net.HttpURLConnection;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+
+import java.net.http.HttpClient;
+import java.net.http.HttpClient.Version;
+import java.net.http.HttpRequest;
+import java.net.http.HttpRequest.BodyPublishers;
+import java.net.http.HttpResponse;
+import java.net.http.HttpResponse.BodyHandler;
+import java.nio.charset.StandardCharsets;
+ 
+
+public class PythonHttpConnection {
+	
+	public static void main(String[] args) {
+		try {
+			HttpRequest request = HttpRequest
+					.newBuilder(new URI("http://ruiiizumi.work:5000/ok-api"))
+					.GET()
+					//.setHeader("Content-Type", "application/x-www-form-urlencoded; charset=utf-8")
+					.build();
+ 
+			BodyHandler<String> bodyHandler = HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8);
+			HttpResponse<String> response = HttpClient.newBuilder().version(Version.HTTP_1_1).build().send(request, bodyHandler);
+			System.out.println(response.body());
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+	

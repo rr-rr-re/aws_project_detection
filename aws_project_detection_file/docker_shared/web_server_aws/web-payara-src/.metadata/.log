@@ -3894,3 +3894,176 @@ Binding(COMMAND+SHIFT+-,
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2021-01-14 18:33:39.540
 !MESSAGE file:/Users/ruimac/eclipse/jee-2020-06/ のリポジトリーが見つかりません。
+!SESSION 2021-01-21 16:40:29.385 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_261
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/ruimac/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/ruimac/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2021-01-21 16:41:07.170
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16|localhost|*.localhost by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2021-01-21 16:41:08.573
+!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-01-21 16:41:08.573
+!MESSAGE COMMAND+SHIFT+T の競合が発生しました:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,型を開く,
+		型を Java エディターで開きます,
+		Category(org.eclipse.ui.category.navigate,ナビゲート,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@24e79a4d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,ワークスペース内のシンボルにジャンプ,
+		,
+		Category(org.eclipse.lsp4e.category,言語サーバー,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5542418c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-01-21 16:41:08.573
+!MESSAGE COMMAND+SHIFT+- の競合が発生しました:
+Binding(COMMAND+SHIFT+-,
+	ParameterizedCommand(Command(org.eclipse.ui.window.splitEditor,エディター分割の切り替え,
+		現在のアクティブなエディターを分割または結合します。,
+		Category(org.eclipse.ui.category.window,ウィンドウ,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@705eb026,
+		[Parameter(Splitter.isHorizontal,向き,null,false)],,true),[org.eclipse.core.commands.Parameterization@6102fa90]),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,ja,,system)
+Binding(COMMAND+SHIFT+-,
+	ParameterizedCommand(Command(org.eclipse.ui.window.splitEditor,エディター分割の切り替え,
+		現在のアクティブなエディターを分割または結合します。,
+		Category(org.eclipse.ui.category.window,ウィンドウ,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@705eb026,
+		[Parameter(Splitter.isHorizontal,向き,null,false)],,true),[org.eclipse.core.commands.Parameterization@6102fa90]),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 16:42:37.378
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 16:44:00.509
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 16:44:00.520
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 16:44:05.923
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 16:44:05.929
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 16:44:53.115
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 16:44:53.118
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:12:47.199
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:12:47.204
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:33:30.654
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:33:30.659
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2021-01-21 17:36:08.394
+!MESSAGE file:/Users/ruimac/eclipse/jee-2020-06/glassfish5/ のリポジトリーが見つかりません。
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2021-01-21 17:36:28.860
+!MESSAGE file:/Users/ruimac/eclipse/jee-2020-06/ のリポジトリーが見つかりません。
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:43:37.770
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:43:37.773
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:44:08.990
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:44:08.996
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:44:19.844
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:44:19.847
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:58:01.287
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:58:01.293
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:58:50.532
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-21 17:58:50.535
+!MESSAGE プラットフォームのエンコーディング (実際は UTF-8) を使用してフィルターされたリソースをコピーします。つまり、ビルドはプラットフォームに依存します!
+!SESSION 2021-01-21 18:11:27.926 -----------------------------------------------
+eclipse.buildId=4.16.0.I20200604-0540
+java.version=1.8.0_261
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/ruimac/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/ruimac/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2021-01-21 18:11:36.287
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16|localhost|*.localhost by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2021-01-21 18:11:37.462
+!MESSAGE キーバインドの競合が発生しました。 通常のアクセラレーター操作を妨げる可能性があります。
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-01-21 18:11:37.462
+!MESSAGE COMMAND+SHIFT+T の競合が発生しました:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,型を開く,
+		型を Java エディターで開きます,
+		Category(org.eclipse.ui.category.navigate,ナビゲート,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@43312512,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,ワークスペース内のシンボルにジャンプ,
+		,
+		Category(org.eclipse.lsp4e.category,言語サーバー,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@13f7c165,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2021-01-21 18:11:37.462
+!MESSAGE COMMAND+SHIFT+- の競合が発生しました:
+Binding(COMMAND+SHIFT+-,
+	ParameterizedCommand(Command(org.eclipse.ui.window.splitEditor,エディター分割の切り替え,
+		現在のアクティブなエディターを分割または結合します。,
+		Category(org.eclipse.ui.category.window,ウィンドウ,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@655f92a1,
+		[Parameter(Splitter.isHorizontal,向き,null,false)],,true),[org.eclipse.core.commands.Parameterization@6102fa90]),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,ja,,system)
+Binding(COMMAND+SHIFT+-,
+	ParameterizedCommand(Command(org.eclipse.ui.window.splitEditor,エディター分割の切り替え,
+		現在のアクティブなエディターを分割または結合します。,
+		Category(org.eclipse.ui.category.window,ウィンドウ,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@655f92a1,
+		[Parameter(Splitter.isHorizontal,向き,null,false)],,true),[org.eclipse.core.commands.Parameterization@6102fa90]),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2021-01-21 18:58:07.601
+!MESSAGE file:/Users/ruimac/eclipse/jee-2020-06/glassfish5/ のリポジトリーが見つかりません。
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2021-01-21 18:58:23.921
+!MESSAGE file:/Users/ruimac/eclipse/jee-2020-06/ のリポジトリーが見つかりません。

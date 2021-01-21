@@ -39,4 +39,5 @@
 <fullyQualifiedTypeName name="org.apache.commons.io.IOUtils"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="practice1.rest.UserDto.UserLogDto"/>
+<fullyQualifiedTypeName name="python.http.PythonHttpConnection"/>
 </qualifiedTypeNameHistroy>
