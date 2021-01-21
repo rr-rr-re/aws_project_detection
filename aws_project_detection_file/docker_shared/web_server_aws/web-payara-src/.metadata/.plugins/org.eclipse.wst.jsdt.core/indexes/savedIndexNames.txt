@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+/Users/ruimac/AWS_files/eclipse-workspace-mainAWS/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+551619145.index
+3339719879.index
+1911837027.index
+544099838.index
+3264587112.index

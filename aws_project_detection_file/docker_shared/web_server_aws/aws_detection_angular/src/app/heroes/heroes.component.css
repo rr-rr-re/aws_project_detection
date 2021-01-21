@@ -1,0 +1,106 @@
+/* HeroesComponent's private CSS styles */
+html {
+  margin-top: 0;
+  background-color: #f9fbfc;
+}
+
+body {
+  margin: 0;
+  background-color: #fbfdfd;
+}
+
+
+.post {
+  margin: 6em auto;
+  background-color: #7e7b7b;
+  width: 400px;
+  height: 600px;
+  padding: 28px;
+  border: 3px solid #7e7c7c;
+  border-radius: 5px;
+  background-color: transparent;
+  box-shadow: 2px 2px 5px 0px rgba(200,200,200,1);
+  font-family: 'Times New Roman';
+}
+
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+}
+
+button:hover {
+  background-color: #169ed8;
+}
+
+input {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+}
+
+input:hover {
+  background-color: #169ed8;
+}
+
+#aaa{
+
+}
+
+#bbb {
+  text-align: center;
+
+}
+
+#aaaimg {
+ width: 325px;
+ height: 500px;
+}
+
+#bbbimg {
+  width: 400px;
+  height: 500px;
+}
+
+h2 {
+  margin: 0;
+  padding: 3px;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: solid 3px #111111;
+}
+.get {
+  margin: 6em auto;
+  background-color: #7e7b7b;
+  width: 400px;
+  height: 600px;
+  padding: 28px;
+  border: 3px solid #7e7c7c;
+  border-radius: 5px;
+  background-color: transparent;
+  box-shadow: 2px 2px 5px 0px rgba(200,200,200,1);
+  font-family: 'Times New Roman';
+}
+
+@media (min-width: 600px) {
+  .parent {
+    display: flex;
+  }
+  .post {
+    flex-grow: 1;
+  }
+  .get {
+    flex-grow: 1;
+  }
+}
+
+

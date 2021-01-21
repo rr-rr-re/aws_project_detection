@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  aws_web:
+    #build: /Users/ruimac/aws_project_detection/aws_project_detection_file/Dockerfile_aws_web
+    image: rrr2020/aws_web:v1.6
+    container_name: aws_web_v1.6.1
+    tty: true
+    networks:
+      - aws_project_detection
+    ports:
+      - 80:80
+      - 4848:4848
+      - 8080:8080
+      - 8181:8181
+      - 8000:8000
+    volumes:
+      - /Users/ruimac/aws_project_detection/aws_project_detection_file/docker_shared:/media/docker_shared/mono_develop
+
+
+
+  processing:
+    #build: /Users/ruimac/aws_project_detection/aws_project_detection_file/Dockerfile_processing
+    image: rrr2020/processing:v3.0.0
+    container_name: processing_v3.0.1
+    tty: true
+    networks:
+      - aws_project_detection
+    ports:
+      - 5000:5000
+    volumes:
+      - /Users/ruimac/aws_project_detection/aws_project_detection_file/docker_shared:/media/docker_shared/mono_develop
+
+
+networks:
+  aws_project_detection:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.18.0.0/16"
+          gateway: "172.18.0.1"

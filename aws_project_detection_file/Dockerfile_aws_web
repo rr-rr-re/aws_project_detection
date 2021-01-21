@@ -1,0 +1,119 @@
+# FROM ubuntu:latest
+FROM ubuntu:18.04
+
+WORKDIR /root
+
+ENV DEBIAN_FRONTEND noninteractive
+# sh->bash
+RUN mv /bin/sh /bin/sh_tmp && ln -s /bin/bash /bin/sh
+
+# apt-get更新 wget取得
+RUN sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
+RUN apt-get update
+RUN apt update
+RUN apt-get upgrade -y
+RUN apt-get install -y wget
+RUN apt-get install -y apt-utils
+RUN apt-get install -y nano
+RUN apt-get install -y less
+RUN apt-get install -y lsof
+
+# RUN apt-get install -y alternatives
+
+
+RUN apt-get install -y vim
+RUN apt-get install -y git
+
+# 日本語環境＆タイムゾーン
+RUN apt-get install -y locales language-pack-ja-base language-pack-ja fonts-ipafont-gothic
+RUN locale-gen ja_JP.UTF-8
+RUN echo 'export LANG=ja_JP.UTF-8' >> /root/.bashrc
+RUN source /root/.bashrc
+
+ENV PYTHONIOENCODING "utf-8"
+ENV LANG ja_JP.UTF-8
+ENV LC_ALL ja_JP.UTF-8
+ENV LC_CTYPE ja_JP.UTF-8
+
+ENV TZ='Asia/Tokyo'
+RUN apt-get install -y tzdata
+#########################################################################
+# setting jdk-8
+
+# 参照:https://hub.docker.com/r/picoded/ubuntu-openjdk-8-jdk/dockerfile/
+RUN apt-get update && \
+	apt-get install -y openjdk-8-jdk && \
+	apt-get install -y ant && \
+	apt-get clean && \
+	rm -rf /var/lib/apt/lists/* && \
+	rm -rf /var/cache/oracle-jdk8-installer;
+
+RUN apt-get update && \
+	apt-get install -y ca-certificates-java && \
+	apt-get clean && \
+	update-ca-certificates -f && \
+	rm -rf /var/lib/apt/lists/* && \
+	rm -rf /var/cache/oracle-jdk8-installer;
+
+# Setup JAVA_HOME, this is useful for docker commandline
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
+RUN export JAVA_HOME
+
+
+#RUN mkdir /usr/lib/jvm
+
+WORKDIR /root/
+RUN mkdir /root/tmp
+COPY library /root/tmp
+
+WORKDIR /root/tmp/
+#RUN tar zxvf jdk-8u271-linux-i586.tar.gz -C /usr/lib/jvm
+
+#WORKDIR /usr/lib/jvm
+
+#RUN update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_271/bin/java" 1
+#RUN update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.8.0_271/bin/java" 1
+#RUN update-alternatives --config java
+
+############################################################
+# setting payara
+
+#  install
+RUN apt-get update
+RUN apt-get install -y unzip pkg-config
+
+WORKDIR /root/tmp/
+
+RUN unzip payara-5.2020.5.zip
+
+WORKDIR /root/tmp/payara-5.2020.5
+
+EXPOSE 8080
+EXPOSE 4848
+#########################################################################
+#setting apache
+
+LABEL maintainer="xx"
+
+RUN apt-get install -y apache2
+
+# ENV APACHE_RUN_USER www-data
+# ENV APACHE_RUN_GROUP www-data
+# ENV APACHE_PID_FILE /var/run/apache2.pid
+# ENV APACHE_RUN_DIR /var/run/apache2
+# ENV APACHE_LOG_DIR /var/log/apache2
+# ENV APACHE_LOCK_DIR /var/lock/apache2
+
+EXPOSE 80
+###########################################################
+# group設定
+RUN groupadd -g 1001 docker
+RUN usermod -aG docker root
+# shared folder作成
+RUN mkdir /media/docker_shared/
+RUN mkdir /media/docker_shared/mono_develop
+RUN chown root:docker -R /media/docker_shared/mono_develop
+RUN chmod 2775 -R /media/docker_shared/mono_develop
+
+# sh->bashを元に戻す
+RUN rm /bin/sh && mv /bin/sh_tmp /bin/sh

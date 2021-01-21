@@ -1,0 +1,29 @@
+<!-- html -->
+<html>
+<body>
+
+<div class="parent">
+
+<div class="post">
+  <form #myForm="ngForm">
+    <h2>ファイルをアップロード</h2>
+      <input  id="aaa" #uploader (change)="onSelect($event)" id="upfile" name="upfile" type="file" #fl
+          accept="image/*" />
+        <img id="aaaimg" [src]="this.image" height="200" >
+        <p> <input id="bbb" (click)="upImg($event)" type="submit" value="sent server" /></p>
+  </form>
+</div>
+
+  <div class="get">
+    <h2>画像を表示。</h2>
+      <button (click)="showing($event)"  >get</button>
+      <img [src]="this.imging" id="bbbimg" alt="画像が取得できません">
+  </div>
+</div>
+
+    <div class="data">
+      json data:<p>{{data | json }}</p>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Application"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="javax.ws.rs.FormParam"/>
+<fullyQualifiedTypeName name="javax.inject.Inject"/>
+<fullyQualifiedTypeName name="javax.enterprise.context.RequestScoped"/>
+<fullyQualifiedTypeName name="javax.ws.rs.container.ContainerRequestContext"/>
+<fullyQualifiedTypeName name="javax.ws.rs.container.ContainerResponseContext"/>
+<fullyQualifiedTypeName name="java.nio.file.DirectoryStream.Filter"/>
+<fullyQualifiedTypeName name="process.ProcessCall"/>
+<fullyQualifiedTypeName name="practice1.rest.UserDto.UserDto"/>
+<fullyQualifiedTypeName name="process.ProcessService"/>
+<fullyQualifiedTypeName name="javax.ws.rs.container.ContainerRequestFilter"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Response"/>
+<fullyQualifiedTypeName name="org.glassfish.jersey.media.multipart.FormDataContentDisposition"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="javax.ws.rs.DefaultValue"/>
+<fullyQualifiedTypeName name="org.glassfish.jersey.media.multipart.MultiPartFeature"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.util.Base64"/>
+<fullyQualifiedTypeName name="practice1.nettest.toImg"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.text.MessageFormat"/>
+<fullyQualifiedTypeName name="process.PythonCall"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="org.python.util.PythonInterpreter"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="org.apache.commons.io.IOUtils"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="practice1.rest.UserDto.UserLogDto"/>
+</qualifiedTypeNameHistroy>

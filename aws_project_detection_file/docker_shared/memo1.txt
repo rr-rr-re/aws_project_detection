@@ -1,0 +1,138 @@
+こんにちは！！！
+
+https://qiita.com/shimatomo/items/d7d2b87fe1f858be378c
+#こんばんは！！
+
+
+
+
+
+ubuntu@ip-192-168-1-225:/usr/lib/jvm$ cd /opt/glassfish5/glassfish/bin
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin restart-domain
+NCLS-ADMIN-00010
+Server is not running, will attempt to start it...
+There is a process already using the admin port 4848 -- it probably is another instance of a GlassFish server.
+Command restart-domain failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo systemctl restart glassfish
+Job for glassfish.service failed because the control process exited with error code.
+See "systemctl status glassfish.service" and "journalctl -xe" for details.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin enable-secure-admin
+NCLS-ADMIN-00010
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+Command enable-secure-admin failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo systemctl restart glassfish
+Job for glassfish.service failed because the control process exited with error code.
+See "systemctl status glassfish.service" and "journalctl -xe" for details.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin enable-secure-admin
+NCLS-ADMIN-00010
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+Command enable-secure-admin failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin enable-secure-admin
+NCLS-ADMIN-00010
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+Command enable-secure-admin failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin start-domain
+There is a process already using the admin port 4848 -- it probably is another instance of a GlassFish server.
+Command start-domain failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin restart-domain
+NCLS-ADMIN-00010
+Server is not running, will attempt to start it...
+There is a process already using the admin port 4848 -- it probably is another instance of a GlassFish server.
+Command restart-domain failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ NCLS-ADMIN-00010
+NCLS-ADMIN-00010: command not found
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ Server is not running, will attempt to start it...
+
+Command 'Server' not found, did you mean:
+
+  command 'server' from deb rsplib-legacy-wrappers
+
+Try: sudo apt install <deb name>
+
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ There is a process already using the admin port 4848 -- it probably is another instance of a GlassFish server.
+There: command not found
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ Command restart-domain failed.
+Command: command not found
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin stop-domain
+NCLS-ADMIN-00010
+CLI306: Warning - The server located at /opt/glassfish5/glassfish/domains/domain1 is not running.
+Command stop-domain executed successfully.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin stop-domain1
+NCLS-ADMIN-00010
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+Command stop-domain1 failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin start-domain
+There is a process already using the admin port 4848 -- it probably is another instance of a GlassFish server.
+Command start-domain failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo lsof -i :22
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo lsof -i :4848
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    17671 root  371u  IPv6 271083      0t0  TCP *:4848 (LISTEN)
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo kill -9 `sudo lsof -t -i:4848
+> 
+> 
+> 
+> 
+> ^C
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo lsof -i :4848
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    17671 root  371u  IPv6 271083      0t0  TCP *:4848 (LISTEN)
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo kill -9 $(sudo lsof -t -i:4848)
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo lsof -i :4848
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin start-domain
+Waiting for domain1 to start ........
+Successfully started the domain : domain1
+domain  Location: /opt/glassfish5/glassfish/domains/domain1
+Log File: /opt/glassfish5/glassfish/domains/domain1/logs/server.log
+Admin Port: 4848
+Command start-domain executed successfully.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo lsof -i :4848
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    18769 root  372u  IPv6 279029      0t0  TCP *:4848 (LISTEN)
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin enable-secure-admin
+NCLS-ADMIN-00010
+javax.net.ssl.SSLHandshakeException: Remote host closed connection during handshake
+Command enable-secure-admin failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo systemctl restart glassfish
+Job for glassfish.service failed because the control process exited with error code.
+See "systemctl status glassfish.service" and "journalctl -xe" for details.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo lsof -i :4848
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    18769 root  372u  IPv6 279029      0t0  TCP *:4848 (LISTEN)
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo kill -9 $(sudo lsof -t -i:4848)
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin enable-secure-admin
+Remote server does not listen for requests on [localhost:4848]. Is the server up?
+No such local command: enable-secure-admin.  Unable to access the server to execute the command remotely.  Verify the server is available. 
+Command enable-secure-admin failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo systemctl restart glassfish
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ ./asadmin restart-domain
+-bash: ./asadmin: Permission denied
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo ./asadmin restart-domain
+NCLS-ADMIN-00010
+Server is not running, will attempt to start it...
+There is a process already using the admin port 4848 -- it probably is another instance of a GlassFish server.
+Command restart-domain failed.
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ sudo lsof -i :4848
+COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+java    18969 root  372u  IPv6 280290      0t0  TCP *:4848 (LISTEN)
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ java -version
+java version "1.8.0_152"
+Java(TM) SE Runtime Environment (build 1.8.0_152-b16)
+Java HotSpot(TM) 64-Bit Server VM (build 25.152-b16, mixed mode)
+ubuntu@ip-192-168-1-225:/opt/glassfish5/glassfish/bin$ 
+
+
+
+
+
+

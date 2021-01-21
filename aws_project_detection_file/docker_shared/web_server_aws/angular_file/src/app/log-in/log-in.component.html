@@ -1,0 +1,32 @@
+<body>
+<!--<h2>Detail</h2>-->
+<form class="aaa" #myForm="ngForm" (ngSubmit)="uplog($event)" novalidate>
+  <h2>Log-in</h2>
+  <div class="namae">
+    <label id="Username" for="name">User name：</label><br />
+    <input id="name" name="name" type="text" [(ngModel)]="User.username"
+      required minlength="3" maxlength="17" #name="ngModel" />
+    <span *ngIf="name.errors?.required">
+     User nameは必須です。</span>
+
+    <span *ngIf="name.errors?.minlength">
+      3文字以上で入力してください。</span>
+    <span *ngIf="name.errors?.maxlength">
+      17文字以内で入力してください。</span>
+  </div>
+  <div class="ango">
+    <label id="Userpass" for="passwd">パスワード：</label><br />
+    <input id="passwd" name="passwd" type="password"
+      [(ngModel)]="User.password"
+      required minlength="6" #passwd="ngModel" />
+    <span *ngIf="passwd.errors?.required&& passwd.dirty">
+      パスワードは必須です。</span>
+     <span *ngIf="passwd.errors?.minlength">
+      パスワードは6文字以上で入力してください。</span>
+  </div>
+  <div class="postlog">
+    <input id="send" type="submit" value="送信"
+      [disabled]="myForm.invalid" />
+  </div>
+  </form>
+</body>

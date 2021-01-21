@@ -1,0 +1,49 @@
+* {
+  margin: -8px;
+  padding: 8px;
+}
+
+header {
+  height: 5em;
+  position: relative;
+  background-color: rgb(2, 2, 2);
+  display: flex;   /*これでheader直下の子要素のレイアウトをコントロールできる状態になりました。*/
+  align-items: center;
+}
+
+#img1 {
+  margin: 1.5em;
+  width: 40px;
+  height: 40px;
+}
+
+#title2 {
+  margin: 0;
+  padding: 0;
+}
+
+.qqq {
+  text-align: left;
+  margin-left: auto;
+}
+
+.nav {
+  text-align: right;
+  display: flex;
+}
+
+ul {
+  list-style: none;
+   margin: 0;
+   display: flex;
+}
+
+li {
+  margin: 0 0 0 15px;
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
+  color: #fdfcfc;
+}
