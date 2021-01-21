@@ -89,6 +89,10 @@ RUN pip3 install Cython
 RUN pip3 install matplotlib
 RUN pip3 install scikit-learn
 RUN pip3 install scikit-image
+RUN pip3 install Flask
+
+# requestsモジュールの追加
+RUN pip3 install requests
 
 # Pybindのインストール ソースのクローンではなくPIPでインストール
 RUN pip3 install pybind11

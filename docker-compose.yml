@@ -14,6 +14,7 @@ services:
       - 8080:8080
       - 8181:8181
       - 8000:8000
+      - 5454:5454
     volumes:
       - /Users/ruimac/aws_project_detection/aws_project_detection_file/docker_shared:/media/docker_shared/mono_develop
 
@@ -21,13 +22,14 @@ services:
 
   processing:
     #build: /Users/ruimac/aws_project_detection/aws_project_detection_file/Dockerfile_processing
-    image: rrr2020/processing:v3.0.0
-    container_name: processing_v3.0.1
+    image: rrr2020/python_http_server:v1.0.0
+    container_name: python_http_v1.0.1
     tty: true
     networks:
       - aws_project_detection
     ports:
       - 5000:5000
+      - 8000:8000
     volumes:
       - /Users/ruimac/aws_project_detection/aws_project_detection_file/docker_shared:/media/docker_shared/mono_develop
 
