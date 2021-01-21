@@ -6,9 +6,18 @@ from urllib.parse import parse_qs, urlparse
 import run_detection
 #/Users/ruimac/python_http_server/python_http_server_file/docker_shared/processing/src/run_detection.py
 
+def start(port, callback):
+    def handler(*args):
+        MyHTTPRequestHandler(callback, *args)
+    server = HTTPServer(('', int(port)), handler)
+    server.serve_forever()
+
 
 # ハンドラを定義していく
 class MyHTTPRequestHandler(BaseHTTPRequestHandler):
+    def __init__(self, callback, *args):
+        self.callback = callback
+        BaseHTTPRequestHandler.__init__(self, *args)
 
     def do_GET(self):
         parsed_path = urlparse.urlparse(self.path)
@@ -18,6 +27,7 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_response(200)
             run_detection()
             self.end_headers()
+            self.callback()
             self.wfile.write("OK")
             return
 
@@ -62,8 +72,10 @@ class MyHTTPRequestHandler(BaseHTTPRequestHandler):
             self.end_headers()
             return
 
+"""
 if __name__ == "__main__":
     address = ('localhost', 5000)
 
     server = HTTPServer(address, MyHTTPRequestHandler)#サーバインスタンスを生成
     server.serve_forever()#常時受けつけモードを指定。
+"""
